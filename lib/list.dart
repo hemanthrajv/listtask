@@ -21,7 +21,8 @@ class ListItemWidget extends StatefulWidget {
   State<ListItemWidget> createState() => _ListItemWidgetState();
 }
 
-class _ListItemWidgetState extends State<ListItemWidget> {
+class _ListItemWidgetState extends State<ListItemWidget>
+    with AutomaticKeepAliveClientMixin {
   var count = 0;
 
   @override
@@ -42,4 +43,7 @@ class _ListItemWidgetState extends State<ListItemWidget> {
           ],
         ));
   }
+
+  @override
+  bool get wantKeepAlive => true;
 }
