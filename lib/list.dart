@@ -5,12 +5,10 @@ class ListWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var list = <Widget>[];
-    for (var i = 0; i <= 100; i++) {
-      list.add(const ListItemWidget());
-    }
     return ListView.builder(
-        itemCount: list.length, itemBuilder: (context, index) => list[index]);
+      itemCount: 100,
+      itemBuilder: (context, index) => const ListItemWidget(),
+    );
   }
 }
 
